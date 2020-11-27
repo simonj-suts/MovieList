@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MovieList</string>
+    <string name="movie_api_key">a9930a8e2a8c2b5e51e82628f200c7c6</string>
+    <string name="tab1_label">NOW SHOWING</string>
+    <string name="tab2_label">UPCOMING MOVIES</string>
+    <string name="tab3_label">WATCH LIST</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="genre">Genre:</string>
+    <string name="popularity">Popularity:</string>
+    <string name="movie_banner">Movie Banner</string>
+    <string name="watch_icon">watch icon</string>
+    <string name="overview">OVERVIEW</string>
+    <string name="add_to_watch_list">ADD TO WATCH LIST</string>
 </resources>

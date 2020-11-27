@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/re_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/networkImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="networkImageView" />
+
+    <TextView
+        android:id="@+id/textView_title"
+        style="@style/textView"
+        android:text="@string/movie_title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintBottom_toTopOf="@id/textView_genre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/textView_genre"
+        style="@style/textView"
+        android:text="@string/genre"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintBottom_toTopOf="@id/textView_popularity"
+        app:layout_constraintTop_toBottomOf="@id/textView_title"/>
+
+    <TextView
+        android:id="@+id/textView_popularity"
+        style="@style/textView"
+        android:text="@string/popularity"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_genre" />
+</androidx.constraintlayout.widget.ConstraintLayout>
