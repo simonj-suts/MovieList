@@ -46,10 +46,8 @@ public class MainActivityDisplay extends AppCompatActivity implements View.OnCli
             LoadingImages("https://image.tmdb.org/t/p/w1280"+movie.getBackdrop_path());
         }
 
-        if (getIntent().getBooleanExtra(NON_CLICKABLE_KEY,false)){
-            button.setClickable(false);
-            button.setBackgroundTintList(getColorStateList(android.R.color.darker_gray));
-        }
+        if (getIntent().getBooleanExtra(NON_CLICKABLE_KEY,false))
+            button.setVisibility(View.GONE);
         else
             button.setOnClickListener(this);
     }
@@ -72,8 +70,6 @@ public class MainActivityDisplay extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View v) {
-        button.setBackgroundTintList(getColorStateList(android.R.color.darker_gray));
-        
         Intent intent = new Intent();
         Bundle agrs = new Bundle();
         agrs.putParcelable(MainActivity.ADD_INTENT_KEY,movie);
